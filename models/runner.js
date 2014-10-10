@@ -77,6 +77,7 @@ function Runner(name, type, src){
 					}}
 				];
 				break;
+
 		}
 	}else{
 		switch(type){
@@ -114,6 +115,7 @@ function Runner(name, type, src){
 					{cmd:'ruby', args:[that.name], start:true}
 				];
 				break;
+
 			case 'lua':
 				that.script = [
 					{cmd:'lua', args:[that.name], start:true
@@ -126,6 +128,11 @@ function Runner(name, type, src){
 				that.script = [
 					{cmd:'javac', args:[that.name]},
 					{cmd:'java', args:[that.class], start:true}
+				];
+				break;
+			case 'hs':
+				that.script = [
+					{cmd:'ghci', args:['./' + that.name]},
 				];
 				break;
 		}

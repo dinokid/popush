@@ -38,6 +38,10 @@ var app = app || {};
 				},
                 success: function () {
 					app.showMessageBar(id, 'registerok');
+                    app.socket.emit('login', {
+                        name: name,
+                        password: pass,
+                    });
 				},
             })) {
                 app.socket.emit('register', {

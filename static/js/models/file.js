@@ -18,6 +18,7 @@ var app = app || {};
     'htm': 'htm',
     'html': 'html',
     'hpp': 'hpp',
+    'hs':'hs',
     'java': 'java',
     'js': 'js',
     'json': 'json',
@@ -33,6 +34,7 @@ var app = app || {};
     'tex': 'tex',
     'vbs': 'vbs',
     'xml': 'xml',
+
   };
 
   app.File = Backbone.Model.extend({
