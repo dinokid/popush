@@ -4,7 +4,7 @@ Popush 部署文档
 Change Log (11 Oct 2014)
 1. haskell
 实现haskell语言支持只需要以下2个步骤：
-
+.
 	1、 打开models/runner.js文件，在133行增加以下代码：
 	
 	case 'hs':
