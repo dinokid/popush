@@ -1,6 +1,32 @@
 Popush 部署文档
 ==============
 
+Change Log (11 Oct 2014)
+1. haskell
+实现haskell语言支持只需要以下2个步骤：
+
+	1、 打开models/runner.js文件，在133行增加以下代码：
+	
+	case 'hs':
+	that.script = [
+	{cmd:'ghci', args:['./' + that.name]},
+	];
+	break;
+	
+	2、打开static\js\room\data.js，把第120行替换成如下代码：
+	
+	app.RunableExt = ['c','cpp', 'hs', 'js', 'py', 'pl','rb','lua', 'java'];
+
+2. auto-login after registration
+	check static/js/views/register-view.js
+	
+	add the following code at the end of success function:
+	app.socket.emit('login', {
+                        name: name,
+                        password: pass,
+                    });
+End of Change Log (11 Oct 2014)
+	
 *stjh10@gmail.com*
 
 *15 Sep 2013*
